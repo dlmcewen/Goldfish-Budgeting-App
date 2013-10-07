@@ -3,6 +3,18 @@
 
     <string name="app_name">goldfish</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home">Home</string>
+    <string name="budgetTV">Budget: temp</string>
+    <string name="button_settings"></string>
+    <string name="fishName">Name: temp</string>
+    <string name="fishAge">Age: temp Days!</string>
+    <string name="endDate">Ends: </string>
+    <string name="button_budgets">Budgets</string>
+    <string name="title_activity_settings">Settings</string>
+    
+    <string name="nameBlock"></string>
+    <string name="fishNameTitle">Fish\'s Name:</string>
+    <string name="fishNameSet">Enter Name</string>
+
 
 </resources>
