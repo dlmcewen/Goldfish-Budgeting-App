@@ -45,4 +45,14 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#ffffff" />
 
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_toRightOf="@+id/fishNameTitle"
+        android:onClick="setValues"
+        android:text="@string/done" />
+
 </RelativeLayout>

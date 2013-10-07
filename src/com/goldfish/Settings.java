@@ -1,10 +1,15 @@
 package com.goldfish;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
 public class Settings extends Activity {
+	
+	private EditText fishNameSet;
+	private GoldFishData goldFishData;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,15 @@ public class Settings extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.settings, menu);
 		return true;
+	}
+	
+	public void setValues(View view)	{
+		goldFishData = new GoldFishData();
+		fishNameSet = (EditText)findViewById(R.id.fishNameSet);
+		
+		
+		goldFishData.setFishName(fishNameSet.getText().toString());
+		
 	}
 
 }
