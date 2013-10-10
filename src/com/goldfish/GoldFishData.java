@@ -11,6 +11,8 @@ public class GoldFishData {
 	private String fishName = "Dr. Fishy";
 	private String username = "Aegis";
 	private String password = "password";
+	private double budgetEntry = 0.00;
+	private String budgetEntryString = "";
 	
 	
 	public int getAge()	{
@@ -51,8 +53,15 @@ public class GoldFishData {
 		this.username = username;
 	}
 	
+	public double getBudgetEntry()	{
+		this.budgetEntry = Double.parseDouble(budgetEntryString);
+		
+		return this.budgetEntry;
+	}
 	
-	
+	public void setBudgetEntry(double budgetEntry)	{
+		this.budgetEntry = budgetEntry;
+	}
 	
 	/*
 	public String getPassword()	{

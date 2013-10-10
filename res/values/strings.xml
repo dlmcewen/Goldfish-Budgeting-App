@@ -20,6 +20,14 @@
     <string name="fishNameSet">Enter Name</string>
     <string name="done">Done</string>
     <string name="title_activity_manual_entry">ManualEntry</string>
-    <string name="hello_world">Hello world!</string>
 
+    
+<!-- 		String for the manual entry activity -->
+    <string name="manual_entry_title">How much did you spend?</string>
+    <string name="manual_entry_amount">Enter amount</string>
+    <string name="manual_entry_cancel">Cancel</string>
+    <string name="manual_entry_done">Done</string>
+    <string name="manual_entry_category_spinner">Select a category</string>
+    
+    
 </resources>

@@ -27,7 +27,6 @@ public class Home extends Activity {
 		budgetTV.setText("Budget: " + goldFishData.getBudgetType().toString() );
 		fishName.setText("Name: " + goldFishData.getFishName().toString() );
 		fishAge.setText ("Age: " + goldFishData.getStringAge() + " Days!" );
-		
 	}
 
 	@Override
@@ -52,6 +51,8 @@ public class Home extends Activity {
 	/** Called when the user clicks the add button */
 	public void button_add(View view)	{
 		// Go to manual entry screen
+		Intent intent = new Intent(this, ManualEntry.class);
+	    startActivity(intent);
 	}
 
 }

@@ -24,10 +24,10 @@ public class Settings extends Activity {
 		return true;
 	}
 	
+	/** Called when the user clicks the set button */
 	public void setValues(View view)	{
 		goldFishData = new GoldFishData();
 		fishNameSet = (EditText)findViewById(R.id.fishNameSet);
-		
 		
 		goldFishData.setFishName(fishNameSet.getText().toString());
 		
