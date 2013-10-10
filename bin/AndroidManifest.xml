@@ -26,6 +26,10 @@
             android:name="com.goldfish.Settings"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name="com.goldfish.ManualEntry"
+            android:label="@string/title_activity_manual_entry" >
+        </activity>
     </application>
 
 </manifest>

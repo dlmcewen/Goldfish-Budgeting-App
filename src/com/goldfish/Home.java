@@ -48,5 +48,10 @@ public class Home extends Activity {
 	    Intent intent = new Intent(this, Settings.class);
 	    startActivity(intent);
 	}
+	
+	/** Called when the user clicks the add button */
+	public void button_add(View view)	{
+		// Go to manual entry screen
+	}
 
 }

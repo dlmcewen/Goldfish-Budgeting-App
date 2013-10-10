@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--
-    	Strings for the home (fullscreen) activity 
-    -->
-    <string name="app_name">goldfish</string>
+
+<!--     	Strings for the home (fullscreen) activity  -->
+    <string name="app_name">Gold Fish Budget</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_home">Home</string>
     <string name="budgetTV">Budget: Food &amp; Drink</string>
-    <string name="button_settings"></string>
     <string name="fishName">Name: Fishy</string>
     <string name="fishAge">Age: 32 Days!</string>
     <string name="endDate">Ends: 12/05/13</string>
     <string name="button_budgets">Budgets</string>
-    
-    <!--
-    	Strings for the settings activity 
-    --> 
+    <string name="button_settings"></string>
+    <string name="button_add"></string>
+
+<!--     	Strings for the settings activity  -->
     <string name="title_activity_settings">Settings</string>
     <string name="nameBlock"></string>
     <string name="fishNameTitle">Fish\'s Name:</string>
     <string name="fishNameSet">Enter Name</string>
     <string name="done">Done</string>
+    <string name="title_activity_manual_entry">ManualEntry</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
