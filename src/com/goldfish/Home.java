@@ -13,6 +13,7 @@ public class Home extends Activity {
 	private TextView fishName;
 	private TextView fishAge;
 	private GoldFishData goldFishData;
+	private BudgetData budgetData;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +21,22 @@ public class Home extends Activity {
 		setContentView(R.layout.activity_fullscreen);
 		
 		goldFishData = new GoldFishData();
+		budgetData = new BudgetData();
+		
 		budgetTV = (TextView)findViewById(R.id.budgetTV);
 		fishName = (TextView)findViewById(R.id.fishName);
 		fishAge = (TextView)findViewById(R.id.fishAge);
 		
-		budgetTV.setText("Budget: " + goldFishData.getBudgetType().toString() );
+		budgetTV.setText("Budget: " + budgetData.getBudgetType().toString() );
 		fishName.setText("Name: " + goldFishData.getFishName().toString() );
-		fishAge.setText ("Age: " + goldFishData.getStringAge() + " Days!" );
+		
+		if (goldFishData.getStringAge() == "1")	{
+			fishAge.setText ("Age: " + goldFishData.getStringAge() + " Day!" );
+		}
+		else	{
+			fishAge.setText ("Age: " + goldFishData.getStringAge() + " Days!" );
+		}
+		
 	}
 
 	@Override

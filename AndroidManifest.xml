@@ -30,6 +30,10 @@
             android:name="com.goldfish.ManualEntry"
             android:label="@string/title_activity_manual_entry" >
         </activity>
+        <activity
+            android:name="com.goldfish.NewCategoryDialog"
+            android:label="@string/title_activity_new_category_dialog" >
+        </activity>
     </application>
 
 </manifest>

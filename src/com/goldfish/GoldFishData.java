@@ -6,26 +6,30 @@ public class GoldFishData {
 	 * Currently temp values assigned to the instance
 	 * variables for asthetic testing purposes
 	 */
-	private int age = -1;
-	private String budgetType = "Groceries";
+	private int age = 6;
+	
 	private String fishName = "Dr. Fishy";
 	private String username = "Aegis";
 	private String password = "password";
 	private double budgetEntry = 0.00;
 	private String budgetEntryString = "";
 	
+	// Depricated variable
+	private String budgetType = "Groceries";
+	
 	
 	public int getAge()	{
 		return this.age;
 	}
 	
-	public void setAge(int age)	{
-		this.age = age;
+	public void setAge(String age)	{
+		this.age = Integer.parseInt(age);
 	}
 	
 	public String getStringAge()	{
 		return "" + age;
 	}
+	
 	
 	public String getBudgetType()	{
 		return this.budgetType;

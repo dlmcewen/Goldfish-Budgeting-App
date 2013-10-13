@@ -3,9 +3,9 @@ package com.goldfish;
 import java.util.Calendar;
 
 public class Budget {
-	int d,m,y;
-    int budgetAmount;
-    String budgetName;
+	private int d,m,y;
+    private int budgetAmount;
+    private String budgetName;
     
     public Budget(){
         budgetName = "";
@@ -32,6 +32,19 @@ public class Budget {
     }
     public int getYear(){
         return y;
+    }
+    
+    
+    public void setDay(int day)	{
+    	this.d = day;
+    }
+    
+    public void setMonth(int month)	{
+    	this.m = month;
+    }
+    
+    public void setYear(int year)	{
+    	this.y = year;
     }
     
     public String getName(){
