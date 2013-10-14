@@ -47,9 +47,7 @@ public class BudgetPane extends Activity{
 		
 	}
 	
-	
-	Scanner fish = new Scanner();
-	
+		
 	
 	
 }
