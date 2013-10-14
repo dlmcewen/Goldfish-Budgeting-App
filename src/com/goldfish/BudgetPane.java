@@ -1,5 +1,7 @@
 package com.goldfish;
 
+import java.util.Scanner;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,7 +46,9 @@ public class BudgetPane extends Activity{
 	public void accounts(View v){
 		
 	}
-
+	
+	
+	Scanner fish = new Scanner();
 	
 	
 	
