@@ -1,10 +1,21 @@
 package com.goldfish;
 
+import java.util.Calendar;
+
 public class BudgetData {
+	
 	
 		private double manualEntryAmount = 0.00;
 		private String budgetType = "Groceries";
+		private int[] date = {Calendar.DATE, Calendar.MONTH};
 		
+		
+		public BudgetData(){
+		}
+
+		public String getDate(){
+			return this.date[0]+"/"+this.date[1];
+		}
 		// Depricated variable
 		private String newCategory = "";
 		

@@ -3,6 +3,7 @@ package com.goldfish;
 import java.util.Scanner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +41,8 @@ public class BudgetPane extends Activity{
 	}
 	
 	public void transactions(View v){
-		
+		Intent intent = new Intent(this, TransactionsPane.class);
+	    startActivity(intent);
 	}
 	
 	public void accounts(View v){
