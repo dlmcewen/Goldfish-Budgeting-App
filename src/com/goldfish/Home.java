@@ -48,8 +48,8 @@ public class Home extends Activity {
 	
 	/** Called when the user clicks the budgets button */
 	public void button_budgets(View v) {
-	    //Intent intent = new Intent(this, DisplayMessageActivity.class);
-	    //startActivity(intent);
+	    Intent intent = new Intent(this, BudgetPane.class);
+	    startActivity(intent);
 	}
 	
 	/** Called when the user clicks the settings button */
