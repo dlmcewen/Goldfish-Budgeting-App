@@ -13,7 +13,6 @@
     <string name="button_settings"></string>
     <string name="button_add"></string>
 
-    
     <!-- Strings for the settings activity -->
     <string name="title_activity_settings">Settings</string>
     <string name="fishNameTV">Fish\'s Name:</string>
@@ -21,14 +20,13 @@
     <string name="done">Done</string>
     <string name="daysTV">Number of days:</string>
     <string name="setDays">Enter Days</string>
-	<string name="budget_spinner_TV">Budget:</string>
-	<string name="setDate">Date:</string>
-	<string name="date">10/17/13</string>
-	<string name="datePickerButton">Select Date</string>
-	<string name="settings_category_spinner">Select a category</string>
-	<string name="settings_new_category"></string>
-	
-	
+    <string name="budget_spinner_TV">Budget:</string>
+    <string name="setDate">Date:</string>
+    <string name="date">10/17/13</string>
+    <string name="datePickerButton">Select Date</string>
+    <string name="settings_category_spinner">Select a category</string>
+    <string name="settings_new_category"></string>
+
     <!-- String for the manual entry activity -->
     <string name="title_activity_manual_entry">ManualEntry</string>
     <string name="manual_entry_title">How much did you spend?</string>
@@ -38,7 +36,7 @@
     <string name="button_add_new_category"></string>
     <string name="amountTV">Amount: </string>
     <string name="manual_entry_category_spinner">Select a category</string>
-    
+
     <!--
     <string name="budget_categories_prompt">Select a category</string> 
     <string-array name="budget_categories">
@@ -46,10 +44,12 @@
         <item>Gas</item>
         <item>Groceries</item>
         <item>Coffee</item>
-    </string-array>
+    </string-array>
     -->
 
     <string name="title_activity_new_category_dialog">NewCategoryDialog</string>
     <string name="new_category_ET">Enter new category</string>
+    <string name="title_activity_transactions">Transactions</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

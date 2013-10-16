@@ -34,6 +34,10 @@
             android:name="com.goldfish.NewCategoryDialog"
             android:label="@string/title_activity_new_category_dialog" >
         </activity>
+        <activity
+            android:name="com.goldfish.Transactions"
+            android:label="@string/title_activity_transactions" >
+        </activity>
     </application>
 
 </manifest>

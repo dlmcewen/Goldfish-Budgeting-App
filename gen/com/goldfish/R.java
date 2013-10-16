@@ -38,20 +38,20 @@ public final class R {
         public static final int budget_spinner_TV=0x7f080020;
         public static final int button2=0x7f080002;
         public static final int button3=0x7f080003;
-        public static final int button_add=0x7f080011;
+        public static final int button_add=0x7f080010;
         public static final int button_add_new_category=0x7f08001a;
-        public static final int button_budgets=0x7f08000e;
-        public static final int button_settings=0x7f08000f;
+        public static final int button_budgets=0x7f08000d;
+        public static final int button_settings=0x7f08000e;
         public static final int date=0x7f080023;
         public static final int datePickerButton=0x7f080022;
         public static final int daysTV=0x7f08001d;
         public static final int done=0x7f08001e;
         public static final int editText1=0x7f080012;
-        public static final int endDate=0x7f080010;
+        public static final int endDate=0x7f08000f;
         public static final int fishAge=0x7f08000b;
         public static final int fishName=0x7f08000c;
         public static final int fishNameTV=0x7f08001b;
-        public static final int goldfishbutton=0x7f08000d;
+        public static final int goldfishbutton=0x7f080011;
         public static final int imageButton1=0x7f080007;
         public static final int manual_entry_amount=0x7f080018;
         public static final int manual_entry_cancel=0x7f080016;
@@ -88,6 +88,7 @@ public final class R {
         public static final int manual_entry=0x7f070003;
         public static final int new_category_dialog=0x7f070004;
         public static final int settings=0x7f070005;
+        public static final int transactions=0x7f070006;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -109,6 +110,7 @@ public final class R {
         public static final int fishAge=0x7f050005;
         public static final int fishName=0x7f050004;
         public static final int fishNameTV=0x7f05000b;
+        public static final int hello_world=0x7f050021;
         public static final int manual_entry_amount=0x7f050018;
         public static final int manual_entry_cancel=0x7f050019;
         public static final int manual_entry_category_spinner=0x7f05001d;
@@ -132,12 +134,14 @@ public final class R {
         <item>Groceries</item>
         <item>Coffee</item>
     </string-array>
+
     
          */
         public static final int title_activity_new_category_dialog=0x7f05001e;
         /**  Strings for the settings activity 
          */
         public static final int title_activity_settings=0x7f05000a;
+        public static final int title_activity_transactions=0x7f050020;
     }
     public static final class style {
         /** 
