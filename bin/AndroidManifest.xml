@@ -30,6 +30,10 @@
             android:name="com.goldfish.ManualEntry"
             android:label="@string/title_activity_manual_entry" >
         </activity>
+        <activity
+            android:name="com.goldfish.EditNewBudget"
+            android:label="@string/title_activity_edit_new_budget" >
+        </activity>
     </application>
 
 </manifest>

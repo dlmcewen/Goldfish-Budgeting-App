@@ -51,7 +51,7 @@ public class Home extends Activity {
 	/** Called when the user clicks the add button */
 	public void button_add(View view)	{
 		// Go to manual entry screen
-		Intent intent = new Intent(this, ManualEntry.class);
+		Intent intent = new Intent(this, EditNewBudget.class);
 	    startActivity(intent);
 	}
 
