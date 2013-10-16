@@ -10,7 +10,7 @@
     android:background="#e5e5e5" >
     
     <TextView
-   	    android:id="@+id/budgetTV"
+   	    android:id="@+id/transactionsTitle"
    	    android:layout_width="wrap_content"
    	    android:layout_height="wrap_content"
    	    android:layout_alignParentLeft="true"
@@ -18,13 +18,11 @@
    	    android:text="Transactions" />
 
    	<TextView
-   	    android:id="@+id/fishAge"
-   	    android:layout_width="wrap_content"
-   	    android:layout_height="wrap_content"
-   	    android:layout_alignBaseline="@+id/budgetTV"
-   	    android:layout_alignBottom="@+id/budgetTV"
-   	    android:layout_alignParentRight="true"
-   	    android:layout_marginRight="22dp"
-   	    android:text="@string/fishAge" />
+        android:id="@+id/trans1TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transactionsTitle"
+        android:layout_marginTop="44dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
