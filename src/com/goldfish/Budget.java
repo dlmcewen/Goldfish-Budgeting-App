@@ -3,9 +3,13 @@ package com.goldfish;
 import java.util.Calendar;
 
 public class Budget {
-	private int d,m,y;
-    private int budgetAmount;
-    private String budgetName;
+	int d,m,y;
+    float budgetAmount;
+    String budgetName;
+    float waterLevelRatio;
+    float currentAmount;
+    String[] tags;
+    boolean isActive = false;
     
     public Budget(){
         budgetName = "";
@@ -15,12 +19,16 @@ public class Budget {
         y = Calendar.YEAR;
         
     }
-    public Budget(String nameOfBudget, int amt, int day, int month, int year){
+    public Budget(String nameOfBudget, int amt, int day, int month, int year, String[] items){
         budgetName = nameOfBudget;
         budgetAmount = amt;
         d = Calendar.DATE;
         m = Calendar.MONTH;
         y = Calendar.YEAR;
+        for(int i=0;i<items.length;i++){
+        	this.tags[i] = items[i];
+        }
+        isActive = true;
         
     }
     
@@ -34,19 +42,6 @@ public class Budget {
         return y;
     }
     
-    
-    public void setDay(int day)	{
-    	this.d = day;
-    }
-    
-    public void setMonth(int month)	{
-    	this.m = month;
-    }
-    
-    public void setYear(int year)	{
-    	this.y = year;
-    }
-    
     public String getName(){
         return budgetName;
     }
@@ -56,8 +51,35 @@ public class Budget {
     public void lessBudget(int amountRemoved){
         budgetAmount = budgetAmount - amountRemoved;
     }
+    public void setDay(int day){
+    	this.d = day;
+    }
+    public void setMonth(int month){
+    	this.m = month;
+    }
+    public void setYear(int year){
+    	this.y = year;
+    }
+    public void setBudgetAmount(float amt){
+    	this.budgetAmount = amt;
+    }
+    public void setBudgetAmount(String name){
+    	this.budgetName = name;
+    }
+    //Returns the ratio of the the current amount in the budget to the budget starting amount
+    public void getLevel(){
+    	float r = this.currentAmount/this.budgetAmount;
+    	this.waterLevelRatio = r;
+    }
+    public String[] getTag(){
+    	return this.tags;
+    }
+    public void setTag(String[] x){
+    	this.tags = x;
+    }
     
-
+    
+    
 	
 	
 	
