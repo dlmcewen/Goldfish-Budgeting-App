@@ -11,33 +11,36 @@
 	    android:layout_height="wrap_content"
 	    tools:context=".BudgetPane"
 	     >
-	
-	    <ImageButton
-	        android:id="@+id/imageButton1"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentTop="false"
-	        android:background="@null"
-	        android:onClick="addBudget"
-	        android:src="@android:drawable/ic_input_add" />
 
 	    <Button
 	        android:id="@+id/transactions"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginRight="22dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
 	        android:background="@null"
 	        android:onClick="transactions"
-	        android:text="Transactions" />
+	        android:text="@string/transactions" />
+
+	    <ImageButton
+	        android:id="@+id/imageButton1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:background="@null"
+	        android:onClick="addBudget"
+	        android:src="@android:drawable/ic_input_add" />
 
 	    <Button
 	        android:id="@+id/accounts"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+   	  		android:layout_alignParentLeft="true"
 	        android:background="@null"
 	        android:onClick="accounts"
-	        android:text="Accounts" />
+	        android:text="@string/accounts" />
 	
 	</LinearLayout>
 </ScrollView>

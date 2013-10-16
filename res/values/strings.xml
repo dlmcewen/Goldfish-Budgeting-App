@@ -29,6 +29,12 @@
 	<string name="settings_new_category"></string>
 	
 	
+	<!--  Strings for the budget activity -->
+	<string name="imagebutton1"></string>
+	<string name="accounts">Accounts</string>
+	<string name="transactions">Transactions</string>
+	
+	
     <!-- String for the manual entry activity -->
     <string name="title_activity_manual_entry">ManualEntry</string>
     <string name="manual_entry_title">How much did you spend?</string>

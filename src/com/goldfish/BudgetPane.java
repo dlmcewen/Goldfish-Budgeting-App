@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 
 public class BudgetPane extends Activity{
-	private Budget[] budgetArray = new Budget[30];
+	private Budget[] budgetArray = new Budget[6];
 	
 	
 	@Override
@@ -19,17 +19,11 @@ public class BudgetPane extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_budget);
 	
+		
 	
 		
-		int length = budgetArray.length;
-		LinearLayout layout = new LinearLayout(this);
-		setContentView(layout);
-		layout.setOrientation(LinearLayout.VERTICAL);
-		for(int i=0;i<length;i++){
-			Button b = new Button(getApplicationContext());
-			b.setText(budgetArray[i].getName());
-			layout.addView(b);
-		}
+		
+		
 		
 		
 	}
