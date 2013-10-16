@@ -20,6 +20,7 @@
     <string name="done">Done</string>
     <string name="daysTV">Number of days:</string>
     <string name="setDays">Enter Days</string>
+<<<<<<< HEAD
     <string name="budget_spinner_TV">Budget:</string>
     <string name="setDate">Date:</string>
     <string name="date">10/17/13</string>
@@ -27,6 +28,22 @@
     <string name="settings_category_spinner">Select a category</string>
     <string name="settings_new_category"></string>
 
+=======
+	<string name="budget_spinner_TV">Budget:</string>
+	<string name="setDate">Date:</string>
+	<string name="date">10/17/13</string>
+	<string name="datePickerButton">Select Date</string>
+	<string name="settings_category_spinner">Select a category</string>
+	<string name="settings_new_category"></string>
+	
+	
+	<!--  Strings for the budget activity -->
+	<string name="imagebutton1"></string>
+	<string name="accounts">Accounts</string>
+	<string name="transactions">Transactions</string>
+	
+	
+>>>>>>> 37b35e99f341018a3f354258c274aa983ddc1d6a
     <!-- String for the manual entry activity -->
     <string name="title_activity_manual_entry">ManualEntry</string>
     <string name="manual_entry_title">How much did you spend?</string>

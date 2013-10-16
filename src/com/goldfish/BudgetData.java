@@ -4,7 +4,23 @@ import java.util.Calendar;
 
 public class BudgetData {
 	
+<<<<<<< HEAD
 		// Deprecated variable
+=======
+	
+		private double manualEntryAmount = 0.00;
+		private String budgetType = "Groceries";
+		private int[] date = {Calendar.DATE, Calendar.MONTH};
+		
+		
+		public BudgetData(){
+		}
+
+		public String getDate(){
+			return this.date[0]+"/"+this.date[1];
+		}
+		// Depricated variable
+>>>>>>> 37b35e99f341018a3f354258c274aa983ddc1d6a
 		private String newCategory = "";
 	
 		private static double entryAmount = 0.00;

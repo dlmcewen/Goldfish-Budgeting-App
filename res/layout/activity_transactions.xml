@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD:res/layout/activity_transactions.xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
 </LinearLayout>
+=======
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    tools:context=".BudgetPane"
+	     >
+
+	    <Button
+	        android:id="@+id/transactions"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:background="@null"
+	        android:onClick="transactions"
+	        android:text="@string/transactions" />
+
+	    <ImageButton
+	        android:id="@+id/imageButton1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentBottom="true"
+	        android:background="@null"
+	        android:onClick="addBudget"
+	        android:src="@android:drawable/ic_input_add" />
+
+	    <Button
+	        android:id="@+id/accounts"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+   	  		android:layout_alignParentLeft="true"
+	        android:background="@null"
+	        android:onClick="accounts"
+	        android:text="@string/accounts" />
+	
+	</LinearLayout>
+</ScrollView>
+>>>>>>> 37b35e99f341018a3f354258c274aa983ddc1d6a:res/layout/activity_budget.xml
