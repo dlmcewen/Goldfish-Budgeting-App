@@ -40,6 +40,8 @@ public class BudgetPane extends Activity{
 	}
 	
 	public void accounts(View v){
+		Intent intent = new Intent(this, AccountsPane.class);
+	    startActivity(intent);
 		
 	}
 	
