@@ -29,7 +29,7 @@
 	        android:layout_marginRight="22dp"
 	        android:background="@null"
 	        android:onClick="transactions"
-	        android:text="Transactions" />
+	        android:text="@string/transactions" />
 
 	    <Button
 	        android:id="@+id/accounts"
@@ -37,7 +37,7 @@
 	        android:layout_height="wrap_content"
 	        android:background="@null"
 	        android:onClick="accounts"
-	        android:text="Accounts" />
+	        android:text="@string/accounts" />
 	
 	</LinearLayout>
 </ScrollView>
