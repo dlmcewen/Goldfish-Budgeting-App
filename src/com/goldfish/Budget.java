@@ -8,6 +8,8 @@ public class Budget {
     String budgetName;
     float waterLevelRatio;
     float currentAmount;
+    String[] tags;
+    boolean isActive = false;
     
     public Budget(){
         budgetName = "";
@@ -17,12 +19,16 @@ public class Budget {
         y = Calendar.YEAR;
         
     }
-    public Budget(String nameOfBudget, int amt, int day, int month, int year){
+    public Budget(String nameOfBudget, int amt, int day, int month, int year, String[] items){
         budgetName = nameOfBudget;
         budgetAmount = amt;
         d = Calendar.DATE;
         m = Calendar.MONTH;
         y = Calendar.YEAR;
+        for(int i=0;i<items.length;i++){
+        	this.tags[i] = items[i];
+        }
+        isActive = true;
         
     }
     
@@ -65,6 +71,13 @@ public class Budget {
     	float r = this.currentAmount/this.budgetAmount;
     	this.waterLevelRatio = r;
     }
+    public String[] getTag(){
+    	return this.tags;
+    }
+    public void setTag(String[] x){
+    	this.tags = x;
+    }
+    
     
     
 	

@@ -43,7 +43,7 @@ public final class R {
         public static final int fishAge=0x7f080004;
         public static final int fishName=0x7f080005;
         public static final int fishNameTV=0x7f080011;
-        public static final int imageButton1=0x7f080000;
+        public static final int imageButton1=0x7f080001;
         public static final int manual_entry_amount=0x7f08000e;
         public static final int manual_entry_cancel=0x7f08000c;
         public static final int manual_entry_category_spinner=0x7f08000f;
@@ -55,7 +55,7 @@ public final class R {
         public static final int setFishName=0x7f080012;
         public static final int settings_category_spinner=0x7f08001a;
         public static final int settings_new_category=0x7f08001b;
-        public static final int transactions=0x7f080001;
+        public static final int transactions=0x7f080000;
     }
     public static final class layout {
         public static final int activity_budget=0x7f030000;
