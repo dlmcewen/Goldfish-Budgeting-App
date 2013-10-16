@@ -3,6 +3,7 @@ package com.goldfish;
 import java.util.Scanner;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class BudgetPane extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_budget);
+		accounts();
 	
 	
 		
@@ -43,7 +45,18 @@ public class BudgetPane extends Activity{
 		
 	}
 	
-	public void accounts(View v){
+	public void accounts(){
+		
+		Button accButton = (Button) findViewById(R.id.accounts);
+		
+		accButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v){
+				
+				//Toast.makeText(MainActivity.this, "Clickity Clack, down the track!", Toast.LENGTH_LONG).show();
+				
+				startActivity(new Intent(BudgetPane.this, AccountScreen.class));
+			}
+		});
 		
 	}
 	

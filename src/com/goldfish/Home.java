@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Home extends Activity {
@@ -37,6 +38,8 @@ public class Home extends Activity {
 			fishAge.setText ("Age: " + goldFishData.getStringAge() + " Days!" );
 		}
 		
+		button_budgets();
+		
 	}
 
 	@Override
@@ -47,9 +50,18 @@ public class Home extends Activity {
 	}
 	
 	/** Called when the user clicks the budgets button */
-	public void button_budgets(View v) {
-	    //Intent intent = new Intent(this, DisplayMessageActivity.class);
-	    //startActivity(intent);
+	public void button_budgets() {
+		
+		Button budgetsButton = (Button) findViewById(R.id.budgetButton);
+		
+		budgetsButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v){
+				
+				//Toast.makeText(MainActivity.this, "Clickity Clack, down the track!", Toast.LENGTH_LONG).show();
+				
+				startActivity(new Intent(Home.this, BudgetPane.class));
+			}
+		});
 	}
 	
 	/** Called when the user clicks the settings button */

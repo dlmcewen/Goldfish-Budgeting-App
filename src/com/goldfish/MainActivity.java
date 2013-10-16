@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void setUpBudgetsButton() {
-		Button budgetsButton = (Button) findViewById(R.id.budgetButton);
+		Button budgetsButton = (Button) findViewById(R.id.button_budgets);
 		
 		budgetsButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v){
