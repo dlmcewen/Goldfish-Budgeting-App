@@ -191,10 +191,10 @@ public class Settings extends Activity {
 					}
 				});
  
-				// create alert dialog
+				// creates alert dialog
 				AlertDialog alertDialog = alertDialogBuilder.create();
  
-			// show it
+			// Show the dialog
 			alertDialog.show();
 	}
 		

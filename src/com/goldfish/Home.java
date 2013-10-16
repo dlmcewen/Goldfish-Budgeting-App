@@ -13,7 +13,7 @@ public class Home extends Activity {
 	private TextView fishName;
 	private TextView fishAge;
 	private GoldFishData goldFishData;
-	private BudgetData budgetData;
+	protected BudgetData budgetData;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,8 @@ public class Home extends Activity {
 	
 	/** Called when the user clicks the budgets button */
 	public void button_budgets(View v) {
-	    //Intent intent = new Intent(this, DisplayMessageActivity.class);
-	    //startActivity(intent);
+	    Intent intent = new Intent(this, BudgetView.class);
+	    startActivity(intent);
 	}
 	
 	/** Called when the user clicks the settings button */

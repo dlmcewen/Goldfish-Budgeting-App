@@ -34,6 +34,18 @@
             android:name="com.goldfish.NewCategoryDialog"
             android:label="@string/title_activity_new_category_dialog" >
         </activity>
+        <activity
+            android:name="com.goldfish.EditNewBudget"
+            android:label="@string/title_activity_edit_new_budget" >
+        </activity>
+        <activity
+            android:name="com.goldfish.TransactionsPane"
+            android:label="@string/title_activity_transactions_pane" >
+        </activity>
+        <activity
+            android:name="com.goldfish.BudgetView"
+            android:label="@string/title_activity_budget_view" >
+        </activity>
     </application>
 
 </manifest>
