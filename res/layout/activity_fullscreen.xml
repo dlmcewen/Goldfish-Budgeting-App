@@ -75,6 +75,15 @@
    	    android:onClick="button_add"
    	    android:src="@android:drawable/ic_input_add" />
 
+   	<Button
+   	    android:id="@+id/goldfishbutton"
+   	    android:layout_width="wrap_content"
+   	    android:layout_height="wrap_content"
+   	    android:layout_below="@+id/fishAge"
+   	    android:layout_centerHorizontal="true"
+   	    android:layout_marginTop="102dp"
+   	    android:background="@drawable/goldfishbutton" />
+
 </RelativeLayout>
 
 
