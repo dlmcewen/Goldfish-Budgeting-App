@@ -13,7 +13,6 @@
     <string name="button_settings"></string>
     <string name="button_add"></string>
 
-    
     <!-- Strings for the settings activity -->
     <string name="title_activity_settings">Settings</string>
     <string name="fishNameTV">Fish\'s Name:</string>
@@ -21,14 +20,13 @@
     <string name="done">Done</string>
     <string name="daysTV">Number of days:</string>
     <string name="setDays">Enter Days</string>
-	<string name="budget_spinner_TV">Budget:</string>
-	<string name="setDate">Date:</string>
-	<string name="date">10/17/13</string>
-	<string name="datePickerButton">Select Date</string>
-	<string name="settings_category_spinner">Select a category</string>
-	<string name="settings_new_category"></string>
-	
-	
+    <string name="budget_spinner_TV">Budget:</string>
+    <string name="setDate">Date:</string>
+    <string name="date">10/17/13</string>
+    <string name="datePickerButton">Select Date</string>
+    <string name="settings_category_spinner">Select a category</string>
+    <string name="settings_new_category"></string>
+
     <!-- String for the manual entry activity -->
     <string name="title_activity_manual_entry">ManualEntry</string>
     <string name="manual_entry_title">How much did you spend?</string>
@@ -38,7 +36,7 @@
     <string name="button_add_new_category"></string>
     <string name="amountTV">Amount: </string>
     <string name="manual_entry_category_spinner">Select a category</string>
-    
+
     <!--
     <string name="budget_categories_prompt">Select a category</string> 
     <string-array name="budget_categories">
@@ -51,5 +49,35 @@
 
     <string name="title_activity_new_category_dialog">NewCategoryDialog</string>
     <string name="new_category_ET">Enter new category</string>
+    <string name="title_activity_edit_new_budget">EditNewBudget</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_transactions_pane">TransactionsPane</string>
+
+    <!-- Strings for budget activity -->
+    <string name="title_activity_budget_view">BudgetView</string>
+    
+    <!-- Strings for edit/new budget activity -->
+    <string name="budget_category">Enter Budget Name</string>
+    <string name="manual_entry">Manual Entry</string>
+    <string name="cash_entry">Cash Entry</string>
+    <string name="date_start">Starts</string>
+    <string name="date_end">Ends</string>
+    <string name="sDate">Set Date</string>
+    <string name="eDate">Set Date</string>
+    <string name="bAmount">Budget Amount</string>
+    <string name="cancel">Cancel</string>
+    <string name="alertInt">Alert Intervals</string>
+    <string name="bTags">Budget Tags</string>
+    <string name="alertText">Send Text Alert</string>
+    <string name="alertIntPrompt">Choose Interval</string>
+
+    <string-array name="alertIntEntries">
+        <item>Every 25%</item>
+        <item>Every 15%</item>
+        <item>Every 5%</item>
+        <item>Never</item>
+    </string-array>
+
+    
 
 </resources>

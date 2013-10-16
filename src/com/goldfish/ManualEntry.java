@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -25,10 +26,14 @@ public class ManualEntry extends Activity {
 	private List<String> spinnerCategories;
 	private ArrayAdapter<String> dataAdapter;
 	
+	private static final int MAXIMUM_NUMBER_OF_BUDGETS = 30; 
+	
 	private EditText manual_entry_amount;
 	private TextView amountTV;
 	private BudgetData budgetData;
+	private BudgetData[] budgetDataArray;
 	final Context context = this;
+	protected static int noOfBudgets = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +41,6 @@ public class ManualEntry extends Activity {
 		setContentView(R.layout.activity_manual_entry);
 		
 		addItemsToCategorySpinner();
-		//addListenerOnSpinnerItemSelection();
 	}
 
 	@Override
@@ -55,7 +59,6 @@ public class ManualEntry extends Activity {
 		spinnerCategories.add("Food");
 		spinnerCategories.add("Coffee");
 		spinnerCategories.add("Gas");
-		spinnerCategories.add("New Category");
 		
 		dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerCategories);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -74,55 +77,6 @@ public class ManualEntry extends Activity {
 		 
 		public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
 			//Toast.makeText(parent.getContext(), "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
-			
-		if (String.valueOf(categorySpinner.getSelectedItem()) == "New Category")	{
-			// get prompts.xml view
-			LayoutInflater li = LayoutInflater.from(context);
-			View promptsView = li.inflate(R.layout.dialog_new_category, null);
-				  
-			AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-	
-			// set prompts.xml to alertdialog builder
-			alertDialogBuilder.setView(promptsView);
-	 
-			final EditText newCategory = (EditText) promptsView.findViewById(R.id.new_category_ET);
-		 
-			// set title
-			alertDialogBuilder.setTitle("New Category");
-	 
-			// set dialog message
-			alertDialogBuilder
-			//.setMessage("Enter a new category")
-				.setCancelable(false)
-				.setPositiveButton("Add",new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog,int id) {
-						// if this button is clicked, close
-						// current activity
-						if (newCategory.getText().toString() != null )	{
-							String userInput = newCategory.getText().toString();
-							budgetData.setNewCategory(userInput);
-							spinnerCategories.add(spinnerCategories.size() - 1, budgetData.getCategory());
-							categorySpinner.setSelection(dataAdapter.getPosition(userInput));
-							categorySpinner.setSelection(dataAdapter.getPosition(userInput));
-						}
-						//ManualEntry.this.finish();
-						dialog.cancel();
-					}
-				  })
-				.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog,int id) {
-						// if this button is clicked, just close
-						// the dialog box and do nothing
-							dialog.cancel();
-						}
-					});
-	 
-					// create alert dialog
-					AlertDialog alertDialog = alertDialogBuilder.create();
-	 
-				// show it
-				alertDialog.show();
-			  }
 		  }
 				
 		  @Override
@@ -136,22 +90,89 @@ public class ManualEntry extends Activity {
 		
 	}
 	
-	/** Called when the user clicks the done button */
-	public void manual_entry_done(View view)	{
-		manual_entry_amount = (EditText)findViewById(R.id.manual_entry_amount);
-		String temp = manual_entry_amount.getText().toString();
-		
-		amountTV = (TextView)findViewById(R.id.amountTV);
-		amountTV.setText("Amount: " + temp);
-		
-		Toast.makeText(ManualEntry.this,"OnClickListener: " + "\nSpinner: "+ String.valueOf(categorySpinner.getSelectedItem()), Toast.LENGTH_SHORT).show();
-	}
-	
 	/** Called when the user clicks the add new category button */
 	public void button_add_new_category(View view)	{
 		
+		// get prompts.xml view
+		LayoutInflater li = LayoutInflater.from(context);
+		View promptsView = li.inflate(R.layout.dialog_new_category, null);
+			  
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+	
+		// set prompts.xml to alertdialog builder
+		alertDialogBuilder.setView(promptsView);
+	 
+		final EditText newCategory = (EditText) promptsView.findViewById(R.id.new_category_ET);
+		 
+		// set title
+		alertDialogBuilder.setTitle("New Category");
+	 
+		// set dialog message
+		alertDialogBuilder
+		//.setMessage("Enter a new category")
+			.setCancelable(false)
+			.setPositiveButton("Add",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					// if this button is clicked, close
+					// current activity
+					if (newCategory.getText().toString() != null )	{
+						String userInput = newCategory.getText().toString();
+						budgetData.setNewCategory(userInput);
+						spinnerCategories.add(spinnerCategories.size() - 1, budgetData.getCategory());
+						categorySpinner.setSelection(dataAdapter.getPosition(userInput));
+						categorySpinner.setSelection(dataAdapter.getPosition(userInput));
+					}
+					//ManualEntry.this.finish();
+					dialog.cancel();
+				}
+			  })
+			.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog,int id) {
+					// if this button is clicked, just close
+					// the dialog box and do nothing
+							dialog.cancel();
+						}
+					});
+	 
+		// creates alert dialog
+		AlertDialog alertDialog = alertDialogBuilder.create();
+	 
+		// Show the dialog
+		alertDialog.show();
+		
 	}
 	
+	/**  */
+	public static int getbudgets()	{
+		return noOfBudgets;
+	}
+	
+	public static void increaseNoBudgets()	{
+		noOfBudgets++;
+	}
+	
+	/** Called when the user clicks the done button */
+	public void manual_entry_done(View view)	{
+		budgetDataArray = new BudgetData[MAXIMUM_NUMBER_OF_BUDGETS];
+		
+		manual_entry_amount = (EditText)findViewById(R.id.manual_entry_amount);
+		String entryAmount = manual_entry_amount.getText().toString();
+		
+		budgetDataArray[noOfBudgets] = new BudgetData();
+		
+		budgetDataArray[noOfBudgets].setManualEntryAmount(entryAmount);
+		budgetDataArray[noOfBudgets].setNewCategory(budgetData.getCategory());
+		
+		amountTV = (TextView)findViewById(R.id.amountTV);
+		amountTV.setText("Amount: " + entryAmount);
+		
+		Toast.makeText(ManualEntry.this,"OnClickListener: " + "\nSpinner: "+ String.valueOf(categorySpinner.getSelectedItem()), Toast.LENGTH_SHORT).show();
+		
+		noOfBudgets++;
+		
+		Intent intent = new Intent(this, Home.class);
+	    startActivity(intent);
+	}
 	
 	
 }

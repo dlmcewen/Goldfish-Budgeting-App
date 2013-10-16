@@ -6,24 +6,28 @@ public class GoldFishData {
 	 * Currently temp values assigned to the instance
 	 * variables for asthetic testing purposes
 	 */
-	private int age = 6;
 	
-	private String fishName = "Dr. Fishy";
+	private static int age = 6;
+	private static String fishName = "Dr. Fishy";
 	private String username = "Aegis";
 	private String password = "password";
 	private double budgetEntry = 0.00;
 	private String budgetEntryString = "";
 	
-	// Depricated variable
+	// Deprecated variable
 	private String budgetType = "Groceries";
 	
 	
 	public int getAge()	{
-		return this.age;
+		return GoldFishData.age;
 	}
 	
 	public void setAge(String age)	{
-		this.age = Integer.parseInt(age);
+		GoldFishData.age = Integer.parseInt(age);
+	}
+	
+	public void setAge(int age)	{
+		GoldFishData.age = age;
 	}
 	
 	public String getStringAge()	{
@@ -31,10 +35,12 @@ public class GoldFishData {
 	}
 	
 	
+	// Deprecated Method
 	public String getBudgetType()	{
 		return this.budgetType;
 	}
 	
+	// Deprecated method
 	public void setBudgetType(String budgetType)	{
 		this.budgetType = budgetType;
 	}
@@ -72,8 +78,14 @@ public class GoldFishData {
 		return this.password;
 	}
 	
-	public void setPassword(String password)	{
-		this.password = password;
+	public void setPassword(String oldPassword, String newPassword, String retypeNewPassword)	{
+		int errorCode;
+	
+		if (oldPassword.equals(this.password))	{
+			
+			this.password = newPassword;
+		
+		}
 	}
 	*/
 }
