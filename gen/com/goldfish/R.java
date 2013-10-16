@@ -58,12 +58,13 @@ public final class R {
         public static final int transactions=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_budget=0x7f030000;
-        public static final int activity_fullscreen=0x7f030001;
-        public static final int activity_manual_entry=0x7f030002;
-        public static final int activity_settings=0x7f030003;
-        public static final int activity_transactions=0x7f030004;
-        public static final int dialog_new_category=0x7f030005;
+        public static final int activity_account=0x7f030000;
+        public static final int activity_budget=0x7f030001;
+        public static final int activity_fullscreen=0x7f030002;
+        public static final int activity_manual_entry=0x7f030003;
+        public static final int activity_settings=0x7f030004;
+        public static final int activity_transactions=0x7f030005;
+        public static final int dialog_new_category=0x7f030006;
     }
     public static final class menu {
         public static final int home=0x7f070000;
